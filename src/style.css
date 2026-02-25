@@ -32,12 +32,28 @@
 }
 
 body {
-  background-color: var(--bg-cream);
+  background: linear-gradient(-45deg, #fdfbf7, #f5efe6, #fdfbf7, #eee2dc);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
   color: var(--dark-roast);
   font-family: var(--font-sans);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1,
@@ -211,10 +227,11 @@ section {
 }
 
 .hero-title {
-  font-size: clamp(4.5rem, 15vw, 12rem);
-  max-width: 1200px;
-  line-height: 0.8;
+  font-size: clamp(3.5rem, 10vw, 9rem);
+  max-width: 1300px;
+  line-height: 0.85;
   margin-top: 0;
+  text-transform: uppercase;
 }
 
 .hero-footer {
