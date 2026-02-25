@@ -1,16 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'OrangeAvenue';
+  src: url('/OrangeAvenue Regular font.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   /* Soft Coffee Palette */
-  --bg-cream: #FDFBF7;
+  --bg-cream: #fdfbf7;
   --latte-beige: #E6DED0;
   --warm-espresso: #3D2B1F;
   --dark-roast: #1A110B;
-  --accent-gold: #C5A059;
+  --accent-gold: #c87b4c;
 
   /* Typography */
-  --font-serif: "Bodoni Moda", serif;
-  --font-sans: "Outfit", sans-serif;
+  --font-serif: "OrangeAvenue", serif;
+  --font-sans: "Montserrat", sans-serif;
 
   /* Spacing */
   --border-width: 2px;
@@ -365,6 +372,56 @@ section {
 .contact-info p {
   font-size: 1.25rem;
   line-height: 1.8;
+}
+
+/* Scrolling Banner */
+.scrolling-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--dark-roast);
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--accent-gold);
+  border-bottom: 1px solid var(--accent-gold);
+  z-index: 100;
+  position: relative;
+}
+
+.banner-track {
+  display: inline-flex;
+  align-items: center;
+  animation: scroll 30s linear infinite;
+}
+
+.banner-item {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding-right: 4rem;
+}
+
+.banner-logo {
+  height: 24px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.banner-text {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--bg-cream);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Responsive Queries */
