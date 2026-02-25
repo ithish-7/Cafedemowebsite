@@ -40,6 +40,14 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  cursor: url('../images/cursor.png'), auto;
+}
+
+a,
+button,
+select,
+input[type="submit"] {
+  cursor: url('../images/cursor.png'), pointer;
 }
 
 @keyframes gradientFlow {
